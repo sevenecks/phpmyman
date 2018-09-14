@@ -7,7 +7,11 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Create your own personal man pages using this tiny PHP cli app, VIM, and Markdown.
+Create your own personal man pages using this tiny PHP cli app, VIM, and Markdown. It's pretty straight forward, you install the application globally using composer (you can install it locally but it means more typing), you can then run 'mm edit topic' which will open a vim editor from your terminal, allowing you to enter markdown or plain text. From there you exit VIM and your personal man page is saved! It will be saved in the /man folder. You can then commit this folder to version control. To access your new man page, just type 'mm topic' and the markdown will be parsed and displayed right there in your terminal.
+
+A word of warning. I wrote this as a personal project for fun, because I saw someone had written something similar in Python and it seemed like a fun thing to see if I could do. The Markdown to Terminal conversion is not 100%. Mainly because terminals don't reliably support everything Markdown tries to do. So, it's a best effort.
+
+In this end, this is nothing more than a little note taking application that uses VIM. It's not special. But, you might find it useful.
 
 ## Installation
 
