@@ -21,12 +21,19 @@ if (file_exists($a = __DIR__.'/../../autoload.php')) {
 
 use SevenEcks\Markdown\MarkdownTerminal;
 
-$path = 'man/';
+$path = getenv('HOME') . '/phpmyman/';
+if (!file_exists($path)) {
+    mkdir($path);
+}
 $command_or_man = empty($argv[1]) ? 'phpmyman' : $argv[1];
 switch ($command_or_man) {
     case 'edit':
         $result = system("vim " . $path .  $argv[2] ." > `tty`");
         echo 'Saved.';
+        break;
+    case 'phpmyman':
+        $content = "mm => show this help file\nmm edit topic => create/edit a pesonal man file\nmm topic => view a personal man file\n";
+        echo $content;
         break;
     default:
         $content = file_get_contents($path . $command_or_man);
