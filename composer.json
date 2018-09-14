@@ -1,0 +1,27 @@
+{
+    "name": "sevenecks/phpmyman",
+    "description": "your own personal man page creator made in php",
+    "type": "package",
+    "require": {
+        "sevenecks/markdown-terminal": "^0.0.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brendan Butts",
+            "email": "bbutts@stormcode.net"
+        }
+    ],
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "SevenEcks\\PhpMyMan\\": "src/"
+        }
+    },
+     "bin": [
+        "mm"
+    ]
+}
