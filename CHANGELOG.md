@@ -1,3 +1,8 @@
+## 0.0.4 - 2018-09-17
+
+- updated readme
+- added list command
+
 ## 0.0.3 - 2018-09-14
 
 - Updated readme

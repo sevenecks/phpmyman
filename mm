@@ -31,8 +31,17 @@ switch ($command_or_man) {
         $result = system("vim " . $path .  $argv[2] ." > `tty`");
         echo 'Saved.';
         break;
+    case 'list':
+        $files = array_diff(scandir($path), array('.', '..'));
+        echo 'PHPMyMan Existing Help Files:' . PHP_EOL;
+        foreach ($files as $file) {
+            if (is_file($path . $file)) {
+                echo $file . PHP_EOL;
+            }
+        }
+        break;
     case 'phpmyman':
-        $content = "mm => show this help file\nmm edit topic => create/edit a pesonal man file\nmm topic => view a personal man file\n";
+        $content = "mm => show this help file\nmm list => list all man files in phpmyman\nmm edit topic => create/edit a pesonal man file\nmm topic => view a personal man file\n";
         echo $content;
         break;
     default:
